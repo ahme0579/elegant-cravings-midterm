@@ -1,0 +1,142 @@
+@import "main.css";
+
+body {
+    background-color: var(--color-purple-dark);
+}
+
+.contact-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+
+.contact-form {
+    background-color: var(--color-purple-dark);
+    border-radius: 1rem;
+    padding: 0 2rem 0 8rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.forms input {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--color-purple-light);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    caret-color: white;
+    color: white;
+}
+
+.forms textarea {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    margin-top: 5px;
+    padding: .5rem;
+    resize: none;
+    background-color: var(--color-purple-light);
+    border: none;
+    border-radius: 10px;
+    caret-color: white;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.forms textarea,
+input:focus {
+    outline: none;
+}
+
+
+
+.forms div {
+    margin: 2rem 0;
+}
+
+
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-top: 2rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.contact-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-button {
+    background-color: var(--color-purple-light);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-button:hover {
+    background-color: var(--color-menu-purple);
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    color: white;
+}
+
+.contact-carousel {
+    width: 100%;
+}
+
+.contact-grid .carousel {
+    width: min(100% - 1rem, 400px);
+    aspect-ratio: 4/5;
+    background-color: #333;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+@media screen and (max-width:768px) {
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact-carousel {
+        width: 100%;
+    }
+
+    .carousel-container {
+        margin-bottom: 5rem;
+    }
+
+    .contact-form {
+        background-color: var(--color-purple-dark);
+        border-radius: 1rem;
+        padding: 0 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+}
