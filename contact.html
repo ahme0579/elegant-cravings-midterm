@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
@@ -21,27 +22,28 @@
     <header>
 
         <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo"><img src="images/logo-nobg.png"></div>
+            <!-- logo -->
+            <div class="logo"><img src="images/logo-nobg.png" alt="Elegant cravings logo."></div>
 
-            <!-- NAVIGATION MENU -->
+            <!-- nav menu using checkbox -->
+            <!-- may appear as wrong in the validator due to nesting of input within ul-->
             <ul class="nav-links">
 
-                <!-- USING CHECKBOX HACK -->
+                <!-- using checkbox -->
                 <input type="checkbox" id="checkbox_toggle" />
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                <!-- NAVIGATION MENUS -->
+                <!-- nav menu -->
                 <div class="menu">
 
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#category-section">Recipes</a></li>
+                    <li><a href="index.html#trending-products">Shop</a></li>
 
                     <li>
-                        <a href="/">Contact Us</a>
+                        <a href="contact.html">Contact</a>
                     </li>
 
-                    <li><a href="/">Meet The Team</a></li>
+                    <li><a href="index.html#category-section">Categories</a></li>
                 </div>
             </ul>
         </nav>
@@ -53,7 +55,7 @@
 
 
         <div class="contact-grid">
-
+            <!-- contact form split using grid -->
             <div class="form-container">
 
                 <form class="contact-form" action="contact.html" method="get">
@@ -87,22 +89,45 @@
             </div>
 
             <div class="carousel">
+                <!-- carousel from previous page brought into this page -->
                 <div class="track">
-                    <div class="image-container"><img class="contact-carousel" src="images/carouselimage-1.jpg"></div>
-                    <div class="image-container"><img class="contact-carousel" src="images/carouselimage-2.jpg"></div>
-                    <div class="image-container"><img class="contact-carousel" src="images/carouselimage-3.jpg"></div>
+                    <div class="image-container">
+                        <picture>
+                            <source srcset="images/carouselimage-1-470_x_587.jpg" media="(max-width:768px)">
+                            <source srcset="images/carouselimage-1.jpg" media="(min-width:768px)">
+                            <img class="contact-carousel" src="images/carouselimage-1.jpg" alt="Carousel image - cake.">
+                        </picture>
+                    </div>
+                    <div class="image-container">
+                        <picture>
+                            <source srcset="images/carouselimage-2-500_x_625.jpg" media="(max-width:768px)">
+                            <source srcset="images/carouselimage-2.jpg" media="(min-width:768px)">
+                            <img class="contact-carousel" src="images/carouselimage-2.jpg"
+                                alt="Carousel image - macaroon.">
+                        </picture>
+                    </div>
+                    <div class="image-container">
+                        <picture>
+                            <source srcset="images/carouselimage-3-2500_x_3125.jpg" media="(max-width:768px)">
+                            <source srcset="images/carouselimage-3.jpg" media="(min-width:768px)">
+                            <img class="contact-carousel" src="images/carouselimage-3.jpg"
+                                alt="Carousel image - cupcakes.">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="cake">
-
-
-        </div>
-
     </main>
 
+    <div class="top-button">
+        <a href="#">
+            <span class="material-icons-outlined">expand_less</span>
+        </a>
+    </div>
+
     <footer class="footer">
+        <!-- same footer as index.html -->
         <div class="footer-container">
             <div class="row">
                 <div class="footer-col">

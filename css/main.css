@@ -1,31 +1,38 @@
 @import "nav.css";
 @import "reset.css";
 
+/* css imports for the nav bar and the reset */
 
+/* variable colors set */
 :root {
   --color-purple-light: #AC75DC;
   --color-purple-dark: #4F3271;
   --color-green-light: #75B79F;
   --color-green-dark: #4d665d;
   --color-menu-purple: #4c3051;
+  --color-text-white: white;
+  --color-black: black;
+  --color-charcoal: #333;
 }
 
+/* css normalization */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* initiate smooths scroll for the site */
 html {
   scroll-behavior: smooth;
 }
 
+/* introduce the font family to the site */
 body {
   font-family: 'Roboto', sans-serif;
 }
 
 /* Intro animation pulling curtain upwards done with the help of divs */
-
 .page-cover,
 .curtain,
 .page-cover::before,
@@ -45,6 +52,7 @@ body {
 
 }
 
+/* curtains is raised at three different intervals using delay to provde intended effect */
 .page-cover::before {
   content: "";
   height: 100vh;
@@ -67,6 +75,7 @@ body {
   transform-origin: top;
 }
 
+/* animation for raising the curtain by changing scale in the Y direction */
 @keyframes raiseCurtain {
   from {
     transform: scaleY(1);
@@ -77,6 +86,7 @@ body {
   }
 }
 
+/* skip link placed at the top of the site for accessibility hidden by deafult */
 .skip-link {
   background-color: var(--color-purple-dark);
 }
@@ -91,7 +101,7 @@ body {
 }
 
 .skip-link a {
-  color: white;
+  color: var(--color-text-white);
   text-decoration: none;
 }
 
@@ -101,13 +111,7 @@ body {
   height: auto;
 }
 
-
-/* .hero-container {
-  background-image: url(../images/hero-banner.png);
-  background-size: cover;
-  padding: 16rem 0;
-  background-position: center;
-} */
+/* hero image placed in the back using position absolute and approriate z-index */
 .hero img {
   position: absolute;
   z-index: -1;
@@ -119,6 +123,7 @@ body {
   width: 100%;
 }
 
+/* grid used for the content within hero banner */
 .hero-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -128,8 +133,6 @@ body {
 .hero-text {
   background-color: var(--color-green-light);
   position: relative;
-  /* top: 10rem;
-  left: 2rem; */
   width: 70%;
   padding: 2rem 2rem;
   align-self: flex-start;
@@ -139,13 +142,13 @@ body {
 }
 
 .hero-text p {
-  color: white;
+  color: var(--color-text-white);
   font-size: 1.2rem;
   padding-bottom: 1rem;
 }
 
 .hero-text h2 {
-  color: white;
+  color: var(--color-text-white);
   font-size: 2.5rem;
   font-weight: bold;
   padding: 1rem 0;
@@ -166,14 +169,14 @@ body {
   font-size: 18px;
   font-family: sans-serif;
   text-decoration: none;
-  color: #333;
+  color: var(--color-charcoal);
   border-radius: 1rem;
   letter-spacing: 2px;
   text-align: center;
   position: relative;
   transition: all .35s;
   margin-top: 1rem;
-  background-color: white;
+  background-color: var(--color-text-white);
 }
 
 .hero-text a span {
@@ -181,6 +184,7 @@ body {
   z-index: 2;
 }
 
+/* after pseudo class for the button animation */
 .hero-text a:after {
   position: absolute;
   content: "";
@@ -194,17 +198,18 @@ body {
 }
 
 .hero-text a:hover {
-  color: #fff;
+  color: var(--color-text-white);
 }
 
 .hero-text a:hover:after {
   width: 100%;
 }
 
+/* carousel done using a container holding 3 divs */
 .carousel {
   width: min(100% - 1rem, 400px);
   aspect-ratio: 4/5;
-  background-color: #333;
+  background-color: var(--color-charcoal);
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -224,7 +229,13 @@ body {
 
 }
 
+.image-carousel {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
+/* div is targetted with nth of type and given translate animations specifically designed to stop at 0%,50%,100% */
 .carousel .track:nth-of-type(1) {
   animation: slideIn 5s 1.5s ease-in-out infinite;
   animation-direction: alternate;
@@ -248,31 +259,12 @@ body {
   }
 }
 
-
 .track .image-container {
   flex: 1;
 
 }
 
-/* 
-.track .image-container:nth-of-type(1) {
-  background-color: green;
-
-}
-
-.track .image-container:nth-of-type(2) {
-  background-color: red;
-}
-
-.track .image-container:nth-of-type(3) {
-  background-color: plum;
-} */
-
-
-
-
-
-
+/* section is done with grid */
 #best-sellers {
   background-color: var(--color-menu-purple);
 }
@@ -290,6 +282,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+/* drop-shadow used for glow effect on hover */
 .gallery img:hover {
   filter: drop-shadow(0 0 0.75rem var(--color-purple-light));
 }
@@ -307,14 +300,14 @@ body {
 }
 
 .galleryimage h3 {
-  color: white;
+  color: var(--color-text-white);
   text-align: center;
   padding-top: 1rem;
   font-weight: bold;
 }
 
 .galleryimage p {
-  color: white;
+  color: var(--color-text-white);
   text-align: center;
   padding-top: 1rem;
 }
@@ -327,16 +320,17 @@ body {
   font-size: 18px;
   font-family: sans-serif;
   text-decoration: none;
-  color: #333;
+  color: var(--color-charcoal);
   border-radius: 1rem;
   letter-spacing: 2px;
   text-align: center;
   position: relative;
   transition: all .35s;
   margin-top: 1rem;
-  background-color: white;
+  background-color: var(--color-text-white);
 }
 
+/* category section made using grid */
 #category-section {
   color: var(--color-purple-dark);
 }
@@ -369,6 +363,7 @@ body {
   transition: 0.8s ease-in-out;
 }
 
+/* grow animation set for entire div on hover state */
 .category-div .categoryimage:hover {
   transform: scale(1.1);
   transition: 0.8s ease-in-out;
@@ -390,20 +385,16 @@ body {
   font-size: 1.5rem;
 }
 
-.image-carousel {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
+/* collage done using grid using 12 columns */
 .deals {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding: 4rem 0 10rem 0;
-  background-color: black;
-
+  background-color: var(--color-black);
 }
 
+/* card given higher z-index to remain on top and span a certain length */
 .deals .card {
   grid-column: 3/7;
   border-radius: 1rem;
@@ -425,12 +416,12 @@ body {
 
 .deals .card span {
   font-weight: bold;
-  color: white;
+  color: var(--color-text-white);
   padding-bottom: 0.5rem;
 }
 
 .deals .card p {
-  color: white;
+  color: var(--color-text-white);
   font-weight: bold;
 }
 
@@ -438,23 +429,17 @@ body {
   display: block;
   font-size: 5rem;
   font-weight: bold;
-  color: white;
+  color: var(--color-text-white);
 }
 
-button {
-  margin-top: 1rem;
-}
-
+/* collage images are also done by spanning grids between each other */
+/* translate is used to make minute movements to each div to maximize accuracy */
 .collage-1 {
   aspect-ratio: 3/4;
   grid-column: 4/7;
   grid-row-start: 1;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
-}
-
-.collage-1:hover {
-  filter: brightness(50%);
 }
 
 .collage-2 {
@@ -464,10 +449,6 @@ button {
   border-radius: 1rem;
   transform: translateY(20%) translateX(-5%);
   transition: all 0.5s ease-in-out;
-}
-
-.collage-2:hover {
-  filter: brightness(50%);
 }
 
 .collage-3 {
@@ -480,6 +461,9 @@ button {
   transition: all 0.5s ease-in-out;
 }
 
+/* dark filter on hover */
+.collage-1:hover,
+.collage-2:hover,
 .collage-3:hover {
   filter: brightness(50%);
 }
@@ -491,30 +475,29 @@ button {
   border-radius: 1rem;
 }
 
+/* Style for the white button */
 button {
+  background-color: var(--color-text-white);
+  color: var(--color-charcoal);
+  padding: 10px 20px;
+  border-radius: 1rem;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-/* Style for the white button */
-button {
-  background-color: #fff;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 1rem;
-  font-size: 16px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
 /* Hover animation for the white button */
 button:hover {
   background-color: var(--color-menu-purple);
-  color: #fff;
+  color: var(--color-text-white);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* banner made using background image property and given fixed to create a parallax sort of effect */
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bakery_banner.jpg);
   padding: 10rem;
@@ -531,7 +514,7 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--color-text-white);
 }
 
 .banner-text h1 {
@@ -547,18 +530,46 @@ button:hover {
   padding-bottom: 0.5rem;
 }
 
+/* same as best-sellers so only target the section and change background color */
 #trending-products {
-  background-color: black;
+  background-color: var(--color-black);
 }
 
 #trending-products h1 {
   padding: 6rem 5rem 2rem 5rem;
-  color: white;
+  color: var(--color-text-white);
   font-size: 3rem;
   font-weight: bolder;
   text-transform: uppercase;
 }
 
+/* styling for the back to top button */
+.top-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border: 2px solid var(--color-purple-light);
+  border-radius: 10%;
+  padding: 0.1rem 0.2rem;
+
+}
+
+.top-button span {
+  font-size: 2rem;
+  color: var(--color-purple-light);
+}
+
+.top-button:hover span {
+  font-size: 2rem;
+  color: var(--color-purple-dark);
+
+}
+
+.top-button:hover {
+  background-color: var(--color-purple-light);
+}
+
+/* footer done with flex*/
 .footer-container {
   max-width: 1170px;
   margin: auto;
@@ -574,7 +585,7 @@ ul {
 }
 
 .footer {
-  background-color: black;
+  background-color: var(--color-black);
   padding: 70px 0;
 }
 
@@ -586,7 +597,7 @@ ul {
 
 .footer-col h4 {
   font-size: 18px;
-  color: #ffffff;
+  color: var(--color-text-white);
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -611,16 +622,16 @@ ul {
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
-  color: #ffffff;
+  color: var(--color-text-white);
   text-decoration: none;
   font-weight: 300;
-  color: #bbbbbb;
+  color: var(--color-text-white);
   display: block;
   transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color: var(--color-text-white);
   padding-left: 8px;
 }
 
@@ -633,27 +644,28 @@ ul {
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--color-text-white);
   transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
   color: #24262b;
-  background-color: #ffffff;
+  background-color: var(--color-text-white);
 }
 
 /* ------------------MOBILE CSS---------------------- */
-
+/* breakpoint set at 768 */
 @media only screen and (max-width: 768px) {
+
+  /* navbar changed to make hamburger menu */
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 20px; */
     padding: 1rem 2rem;
     padding-bottom: 2rem;
     background-color: var(--color-purple-dark);
-    color: #fff;
+    color: var(--color-text-white);
   }
 
   .menu {
@@ -705,6 +717,7 @@ ul {
     margin: 0 1rem;
   }
 
+  /* grid to 1fr to make it vertical */
   .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -713,42 +726,36 @@ ul {
 
   }
 
+  /* grid to 1fr to make it vertical */
   .hero-container {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
 
+  /* remove collage images in mobile to improve readability */
   .collage-1,
   .collage-2,
   .collage-3 {
     display: none;
   }
 
+  /* change position of card to fit */
   .deals .card {
     grid-column: 2/11;
-    border-radius: 1rem;
     padding: 2rem 1rem 2rem 1rem;
-    width: 100%;
-    background-color: var(--color-purple-light);
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    grid-row-start: 0;
     align-self: start;
-    z-index: 1;
-    position: relative;
     transform: translateY(0) translateX(10px);
   }
 
   .deals {
     grid-template-columns: repeat(12, 1fr);
     padding: 4rem 0 4rem 0;
-    background-color: black;
+    background-color: var(--color-black);
 
   }
 
+  /* grid to 1fr to make it vertical */
   .category-div {
     display: grid;
     grid-template-columns: 1fr;
@@ -765,6 +772,7 @@ ul {
     color: var(--color-purple-dark);
   }
 
+  /* footer made vertical */
   .footer {
     padding: 0;
   }

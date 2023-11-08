@@ -1,80 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
-
+/* navbar done using display flex */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 20px; */
-    padding: 1rem 5rem ;
-    background-color: var(--color-purple-dark);
-    color: #fff;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 1;
-  }
-  
-  .nav-links a {
-    color: #fff;
-  }
-  
-  /* LOGO */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: var(--color-purple-dark);
+  color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
 
-  .logo {
-    max-width: 100%;
-  }
-  .logo img{
-    max-width: 18%;
-  }
-  
-  /* NAVBAR MENU */
-  .menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-  }
-  
-  .menu li:hover {
+.nav-links a {
+  color: #fff;
+}
 
-    border-radius: 5px;
-    /* transition: 0.3s ease; */
-  }
-  
-  .menu li {
-    padding: 5px 14px;
-  }
+/* logo width */
 
- /* RESPONSIVE NAVBAR MENU STARTS */
+.logo {
+  max-width: 100%;
+}
 
-/* CHECKBOX HACK */
+.logo img {
+  max-width: 18%;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+
+  border-radius: 5px;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* responsive navbar */
+
+/* checkbox used and set to display none to hide */
 
 input[type=checkbox] {
-    display: none;
-  } 
-  
-  /* HAMBURGER MENU */
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    user-select: none;
-  }
+  display: none;
+}
 
-  .navbar a{
-    text-decoration: none;
-  }
-  .navbar a {
-    background: linear-gradient(90deg, #75B79F, #75B79F, #75B79F);
-    background-size: 0 3px;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-position: 100% 100%;
-    cursor: pointer;
-    transition: 0.5s all;
-    color: white;
+/* hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a {
+  background: linear-gradient(90deg, #75B79F, #75B79F, #75B79F);
+  background-size: 0 3px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-position: 100% 100%;
+  cursor: pointer;
+  transition: 0.5s all;
+  color: var(--color-text-white);
 }
 
 .navbar a:hover,
 .navbar a:active {
-    background-size: 100% 3px;
-    color: #ffffff;
+  background-size: 100% 3px;
+  color: #ffffff;
 }
-  

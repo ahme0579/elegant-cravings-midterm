@@ -9,16 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- font-awesome link above used for social media icons in the footer -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
-
+    <!-- divs used to create the intro animations -->
     <div class="page-cover">
         <div class="curtain"></div>
         <div class="curtain"></div>
     </div>
 
     <header>
+        <!-- skip links to different points of site -->
         <div class="skip-link">
             <a href="#best-sellers" class="skip">Skip to Best Sellers</a>
             <a href="#category-section" class="skip">Skip to Categories</a>
@@ -27,27 +30,28 @@
             <a href="#trending-products" class="skip">Skip to Trending Products</a>
         </div>
         <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo"><img src="images/logo-nobg.png"></div>
+            <!-- logo -->
+            <div class="logo"><img src="images/logo-nobg.png" alt="Elegant cravings logo."></div>
 
-            <!-- NAVIGATION MENU -->
+            <!-- nav menu using checkbox -->
+            <!-- may appear as wrong in the validator due to nesting of input within ul-->
             <ul class="nav-links">
 
-                <!-- USING CHECKBOX HACK -->
+                <!-- using checkbox -->
                 <input type="checkbox" id="checkbox_toggle" />
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                <!-- NAVIGATION MENUS -->
+                <!-- nav menu -->
                 <div class="menu">
 
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#category-section">Recipes</a></li>
+                    <li><a href="#trending-products">Shop</a></li>
 
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="contact.html">Contact</a>
                     </li>
 
-                    <li><a href="/">Meet The Team</a></li>
+                    <li><a href="#category-section">Categories</a></li>
                 </div>
             </ul>
         </nav>
@@ -57,10 +61,15 @@
     <main>
 
         <section class="hero">
-            <img class="hero-image" src="images/hero-banner.png" alt="hero banner">
+            <!-- hero banner -->
+            <picture>
+                <source srcset="images/hero-banner-1600_x_900.png" media="(max-width:768px)">
+                <source srcset="images/hero-banner.png" media="(min-width:768px)">
+                <img class="hero-image" src="images/hero-banner.png" alt="Hero banner.">
+            </picture>
 
+            <!-- hero text and carousel built within grid -->
             <div class="hero-container">
-
 
                 <div class="hero-text">
                     <p>Indulge yourself, and the people you love, with delicious handmade treats.
@@ -68,24 +77,47 @@
                     <h2>Savoring Emotions, One Bite at a Time</h2>
                     <a href="#"><span>Order</span></a>
                 </div>
-
+                <!-- animated carousel built using 3 divs in a container -->
                 <div class="carousel">
                     <div class="track">
-                        <div class="image-container"><img src="images/carouselimage-1.jpg"></div>
-                        <div class="image-container"><img src="images/carouselimage-2.jpg"></div>
-                        <div class="image-container"><img src="images/carouselimage-3.jpg"></div>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="images/carouselimage-1-470_x_587.jpg" media="(max-width:768px)">
+                                <source srcset="images/carouselimage-1.jpg" media="(min-width:768px)">
+                                <img src="images/carouselimage-1.jpg" alt="Carousel image - cake.">
+                            </picture>
+                        </div>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="images/carouselimage-2-500_x_625.jpg" media="(max-width:768px)">
+                                <source srcset="images/carouselimage-2.jpg" media="(min-width:768px)">
+                                <img src="images/carouselimage-2.jpg" alt="Carousel image - macaroon.">
+                            </picture>
+                        </div>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="images/carouselimage-3-2500_x_3125.jpg" media="(max-width:768px)">
+                                <source srcset="images/carouselimage-3.jpg" media="(min-width:768px)">
+                                <img src="images/carouselimage-3.jpg" alt="Carousel image - cupcakes.">
+                            </picture>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </section>
 
+
         <section id="best-sellers">
             <h1>Best Sellers</h1>
             <div class="gallery">
-
+                <!-- gallery done using grid -->
                 <div class="galleryimage">
-                    <img src="images/galleryimage-1.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-1-583_x_583.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-1.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-1.jpg" alt="Customized cakes.">
+                    </picture>
                     <div class="text">
                         <h3>Customized Cakes</h3>
                         <p>C$80.00</p>
@@ -95,7 +127,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-2.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-2-1200_x_1200.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-2.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-2.jpg" alt="Cinnamon roll.">
+                    </picture>
                     <div class="text">
                         <h3>Elegant Cravings Signature Cinnamon Roll</h3>
                         <p>C$20.00</p>
@@ -104,7 +140,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-3.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-3-583_x_583.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-3.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-3.jpg" alt="Candies.">
+                    </picture>
                     <div class="text">
                         <h3>Assorted Candies</h3>
                         <p>C$10.00</p>
@@ -113,7 +153,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-4.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-4-400_x_400.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-4.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-4.jpg" alt="Cupcakes.">
+                    </picture>
                     <div class="text">
                         <h3>Customized Cupcakes</h3>
                         <p>C$25.00</p>
@@ -127,50 +171,78 @@
         <section id="category-section">
 
             <h1>Shop by category</h1>
-
+            <!-- done with grid -->
             <div class="category-div">
                 <div class="categoryimage">
-                    <img src="images/categoryimage1.jpg">
-
+                    <picture>
+                        <source srcset="images/categoryimage1-933_x_1397.jpg" media="(max-width:768px)">
+                        <source srcset="images/categoryimage1.jpg" media="(min-width:768px)">
+                        <img src="images/categoryimage1.jpg" alt="Cakes.">
+                    </picture>
                     <div class="text">
                         <h2>Cakes</h2>
                     </div>
-
-
                 </div>
 
                 <div class="categoryimage">
-                    <img src="images/categoryimage2.jpg">
+                    <picture>
+                        <source srcset="images/categoryimage2-1000_x_1500.jpg" media="(max-width:768px)">
+                        <source srcset="images/categoryimage2.jpg" media="(min-width:768px)">
+                        <img src="images/categoryimage2.jpg" alt="Pastries.">
+                    </picture>
                     <div class="text">
                         <h2>Pastries</h2>
                     </div>
                 </div>
 
                 <div class="categoryimage">
-                    <img src="images/categoryimage3.jpg">
+                    <picture>
+                        <source srcset="images/categoryimage3-569_x_853.jpg" media="(max-width:768px)">
+                        <source srcset="images/categoryimage3.jpg" media="(min-width:768px)">
+                        <img src="images/categoryimage3.jpg" alt="Other goodies.">
+                    </picture>
                     <div class="text">
                         <h2>Other Goodies</h2>
                     </div>
                 </div>
-
+            </div>
         </section>
 
         <section id="deals-section">
-
+            <!-- done using grid with specific spans to allow overlaps creating collage effect -->
             <div class="deals">
                 <div class="card">
                     <span>This Week's deals</span>
                     <p><span>10%</span>off all pastries</p>
-                    <button class="white-button">Shop Now</button>
+                    <button class="var(--color-text-white)-button">Shop Now</button>
                 </div>
-                <div class="collage-1"><img src="images/collage-image1.jpg"></div>
-                <div class="collage-2"><img src="images/collage-image2.jpg"></div>
-                <div class="collage-3"><img src="images/collage-image3.jpg"></div>
+                <div class="collage-1">
+                    <picture>
+                        <source srcset="images/collage-image1-750_x_1000.jpg" media="(max-width:768px)">
+                        <source srcset="images/collage-image1.jpg" media="(min-width:768px)">
+                        <img src="images/collage-image1.jpg" alt="Chocolate pastries.">
+                    </picture>
+                </div>
+                <div class="collage-2">
+                    <picture>
+                        <source srcset="images/collage-image2-1422_x_1897.jpg" media="(max-width:768px)">
+                        <source srcset="images/collage-image2.jpg" media="(min-width:768px)">
+                        <img src="images/collage-image2.jpg" alt="Tarts.">
+                    </picture>
+                </div>
+                <div class="collage-3">
+                    <picture>
+                        <source srcset="images/collage-image3-625_x_1000.jpg" media="(max-width:768px)">
+                        <source srcset="images/collage-image3.jpg" media="(min-width:768px)">
+                        <img src="images/collage-image3.jpg" alt="Pastries.">
+                    </picture>
+                </div>
             </div>
 
         </section>
 
         <section id="offer">
+            <!-- done using background-image property in css -->
             <div class="banner">
                 <div class="banner-text">
                     <h1>Spend and Save</h1>
@@ -181,11 +253,16 @@
         </section>
 
         <section id="trending-products">
+            <!-- replica of the prior best-sellers section so code is copied and css is changed to change background color -->
             <h1>Trending Products</h1>
             <div class="gallery">
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-1.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-1-583_x_583.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-1.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-1.jpg" alt="Customized cakes.">
+                    </picture>
                     <div class="text">
                         <h3>Customized Cakes</h3>
                         <p>C$80.00</p>
@@ -195,7 +272,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-2.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-2-1200_x_1200.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-2.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-2.jpg" alt="Cinnamon roll.">
+                    </picture>
                     <div class="text">
                         <h3>Elegant Cravings Signature Cinnamon Roll</h3>
                         <p>C$20.00</p>
@@ -204,7 +285,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-3.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-3-583_x_583.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-3.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-3.jpg" alt="Candies.">
+                    </picture>
                     <div class="text">
                         <h3>Assorted Candies</h3>
                         <p>C$10.00</p>
@@ -213,7 +298,11 @@
                 </div>
 
                 <div class="galleryimage">
-                    <img src="images/galleryimage-4.jpg">
+                    <picture>
+                        <source srcset="images/galleryimage-4-400_x_400.jpg" media="(max-width:768px)">
+                        <source srcset="images/galleryimage-4.jpg" media="(min-width:768px)">
+                        <img src="images/galleryimage-4.jpg" alt="Cupcakes.">
+                    </picture>
                     <div class="text">
                         <h3>Customized Cupcakes</h3>
                         <p>C$25.00</p>
@@ -225,7 +314,16 @@
         </section>
     </main>
 
+    <!-- back to top button -->
+    <div class="top-button">
+        <a href="#">
+            <span class="material-icons-outlined">expand_less</span>
+        </a>
+    </div>
+
+
     <footer class="footer">
+        <!-- footer made with divs seperated into columns -->
         <div class="footer-container">
             <div class="row">
                 <div class="footer-col">
@@ -258,6 +356,7 @@
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
+                        <!-- icons done using <i> property as provided by fontawesome-->
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
