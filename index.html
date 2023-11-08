@@ -34,26 +34,29 @@
             <div class="logo"><img src="images/logo-nobg.png" alt="Elegant cravings logo."></div>
 
             <!-- nav menu using checkbox -->
-            <!-- may appear as wrong in the validator due to nesting of input within ul-->
-            <ul class="nav-links">
+            <!--updated to place within div-->
+            <div class="nav-links">
 
                 <!-- using checkbox -->
-                <input type="checkbox" id="checkbox_toggle" />
+                <input type="checkbox" id="checkbox_toggle">
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <!-- nav menu -->
                 <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#trending-products">Shop</a></li>
 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#trending-products">Shop</a></li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
 
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                        <li><a href="#category-section">Categories</a></li>
+                    </ul>
 
-                    <li><a href="#category-section">Categories</a></li>
                 </div>
-            </ul>
+
+            </div>
         </nav>
 
     </header>
@@ -208,7 +211,7 @@
             </div>
         </section>
 
-        <section id="deals-section">
+        <div id="deals-section">
             <!-- done using grid with specific spans to allow overlaps creating collage effect -->
             <div class="deals">
                 <div class="card">
@@ -239,7 +242,7 @@
                 </div>
             </div>
 
-        </section>
+        </div>
 
         <section id="offer">
             <!-- done using background-image property in css -->
@@ -330,9 +333,9 @@
                     <h4>company</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#category-section">Recipes</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Meet the Team</a></li>
+                        <li><a href="#trending-products">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#category-section">Categories</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

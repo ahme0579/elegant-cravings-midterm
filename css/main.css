@@ -679,6 +679,10 @@ ul {
     padding: 16px 0;
   }
 
+  .menu li {
+    display: block;
+  }
+
   .menu li:hover {
     display: inline-block;
 

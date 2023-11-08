@@ -39,6 +39,8 @@
 
 .menu li {
   padding: 5px 14px;
+  list-style-type: none;
+  display: inline;
 }
 
 /* responsive navbar */
